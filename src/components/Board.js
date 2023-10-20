@@ -18,7 +18,7 @@ const Board = () => {
   return (
     <div className={fixedVisibilty}>
       <Headerboard />
-      <Postform />
+      {/* <Postform /> */}
       <Postlisting />
   
     </div>

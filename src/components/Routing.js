@@ -41,8 +41,8 @@ const Routing = () => {
 
       {!redirect && (
         <>
-          <Header />
-          <UploadModal />
+          {/* <Header /> */}
+          {/* <UploadModal /> */}
           <Routinglocation />
           <Authmodal />
           <CommunityFormModal />

@@ -153,7 +153,7 @@ const Header = () => {
               <button className="icon-btn">
                 <BsChatDots className={theLightModeIcon} />
               </button> */}
-              <button className="icon-btn" onClick={togglePlusDropDown}>
+              <button disabled className="icon-btn" onClick={togglePlusDropDown}>
                 <HiOutlinePlus className={theLightModeIcon} />
               </button>
 

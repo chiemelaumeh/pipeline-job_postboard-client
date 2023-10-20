@@ -45,15 +45,15 @@ const Postform = () => {
           
           </div>
           }
-          <form
+          <form disabled
             action=""
             onClick={(e) => {
               e.preventDefault();
               popUpModal();
             }}
           >
-            <span type="text" disabled className="first-form-input" placeholder="New Post" >
-              <p className="create-text">Create post</p>
+            <span disabled type="text"className="first-form-input" placeholder="New Post" >
+              <p disabled className="create-text">Create post</p>
               </span>
           </form>
         </div>

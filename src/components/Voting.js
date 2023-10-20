@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { BiUpvote } from "react-icons/bi";
 import { BiDownvote } from "react-icons/bi";
-import axios from "axios";
+// import axios from "axios";
 import { useState, useContext } from "react";
 import UserContext from "../context/UserContext";
 import AuthModalContext from "../context/AuthModalContext";
@@ -13,30 +13,30 @@ const Voting = ({ props }) => {
   const { user } = useContext(UserContext);
   const { setModalVisibility } = useContext(AuthModalContext);
 
-  const sendVote = async (direction, hasVotedUp, hasVotedDown) => {
-    const url = `/votes/${props._id}/${user.username}/${direction}/${hasVotedUp}/${hasVotedDown}`;
-    try {
-      const response = await axios.get(url, {
-        withCredentials: true,
-      });
-      setVoteState(response.data);
-    } catch (error) {
-      console.error(error.message);
-    }
-  };
-  useEffect(() => {
+  // const sendVote = async (direction, hasVotedUp, hasVotedDown) => {
+  //   const url = `/votes/${props._id}/${user.username}/${direction}/${hasVotedUp}/${hasVotedDown}`;
+  //   try {
+  //     const response = await axios.get(url, {
+  //       withCredentials: true,
+  //     });
+  //     setVoteState(response.data);
+  //   } catch (error) {
+  //     console.error(error.message);
+  //   }
+  // };
+  // useEffect(() => {
 
-    const refreshVotes = async () => {
-      const url = `/votes/${props._id}/`;
-      try {
-        const response = await axios.get(url);
-        setVoteState(response.data);
-      } catch (error) {
-        console.error(error.message);
-      }
-    };
-    refreshVotes();
-  }, [voteState]);
+  //   const refreshVotes = async () => {
+  //     const url = `/votes/${props._id}/`;
+  //     try {
+  //       const response = await axios.get(url);
+  //       setVoteState(response.data);
+  //     } catch (error) {
+  //       console.error(error.message);
+  //     }
+  //   };
+  //   refreshVotes();
+  // }, [voteState]);
 
 
   const handleVoteUp = () => {
@@ -45,7 +45,7 @@ const Voting = ({ props }) => {
     }
     if (upVotedState === false) {
       setUpVotedState(true);
-      sendVote("up","true","false");
+      // sendVote("up","true","false");
       
       setDownVotedState(false);
     }
@@ -57,7 +57,7 @@ const Voting = ({ props }) => {
 
     if (downVotedState === false) {
       if (voteState === 0) return;
-      sendVote("down", "false","true");
+      // sendVote("down", "false","true");
       setDownVotedState(true);
       setUpVotedState(false);
     }

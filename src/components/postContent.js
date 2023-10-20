@@ -86,12 +86,12 @@ const PostContent = (props) => {
     <div>
       {postComments.map((singleComment, index) => {
         return (
-          <div key={index}>
+          <div  key={index}>
             <div className="text-dots">
               <div className="posted-by-h5">
                 {" "}
                 Posted by {props.author}, in{" "}
-                <p onClick={navigateToCommunity} className="community-text">
+                <p aria-disabled onClick={navigateToCommunity} className="community-text">
                   {" "}
                   r/{props.chosenCommunity}
                 </p>{" "}
@@ -149,7 +149,7 @@ const PostContent = (props) => {
               )}
 
               {/* {singleComment.author === user.username && !showEditandDelete && ( */}
-                <BsThreeDotsVertical
+                {/* <BsThreeDotsVertical 
                   className="dots"
                   id={props._id}
                   onClick={() => {
@@ -161,7 +161,7 @@ const PostContent = (props) => {
                     setConfirmDeleteVisibility(false);
                     setDeleteModalVisibility(false);
                   }}
-                />
+                /> */}
               {/* )} */}
             </div>
             <h2>{singleComment.title}</h2>
@@ -175,7 +175,7 @@ const PostContent = (props) => {
           // to={"/comments/" + (props.rootId || props._id)}
           state={{ commentId: props.rootId || props._id }}
         >
-          <FaRegCommentDots onClick={popUpModal} className={theLightMode} />
+          {/* <FaRegCommentDots  onClick={popUpModal} className={theLightMode} /> */}
         </Link>
         {/* {
           shareBox   &&(
