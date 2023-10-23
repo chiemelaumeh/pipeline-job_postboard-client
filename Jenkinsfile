@@ -19,8 +19,6 @@ pipeline {
             steps {
                 
             sh "npm install"  
-
-                
             // sh "nodemon server.js"
             }
         }
