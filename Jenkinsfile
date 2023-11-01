@@ -16,8 +16,7 @@ pipeline {
            }
 
         stage("Build") {
-            steps {
-                
+            steps {   
             sh "npm install"  
             // sh "nodemon server.js"
             }
