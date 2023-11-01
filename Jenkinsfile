@@ -12,7 +12,7 @@ pipeline {
             steps {
                 jacoco() 
                 
-            }
+            } 
            }
 
         stage("Build") {
