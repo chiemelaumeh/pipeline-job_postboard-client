@@ -23,7 +23,7 @@ pipeline {
         }
         stage("Publish Artifacts") {
             steps {   
-            sh "set +x && echo \"//ec2-18-219-224-215.us-east-2.compute.amazonaws.com:8081/repository/nexus-postboard-client/:_authToken=NpmToken.d7cc2907-ecf0-3922-88ef-b76f1bd96f33\" >> .npmrc"
+            sh "set +x && echo \"//ec2-18-219-84-162.us-east-2.compute.amazonaws.com:8081/repository/postboard-client_hosted/:_authToken=NpmToken.2843eecf-c55f-3155-9788-2091229be97a\" >> .npmrc"
             sh "npm publish"
             }
         }
