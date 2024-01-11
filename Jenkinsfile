@@ -27,5 +27,13 @@ pipeline {
             sh "npm publish"
             }
         }
+           stage ("Code Quality") {
+            steps {
+                withSonarQubeEnv("SonarQube") {
+                    // sh "npm install sonar-scanner"
+                    // sh "npm run sonar"
+                }
+            }
+        }
           }
          }
